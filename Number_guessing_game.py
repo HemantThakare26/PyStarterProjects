@@ -15,7 +15,8 @@ try:
                     if guess == shuffle :
                         print("Hurray !!! you won....")
                         print(f"You guess the exact Number : {shuffle}")
-                        Consent = input("Want to try Again ? (y/n) : ").lower()
+                        Consent = 'n'
+                        break
 
                     elif guess > shuffle:
                         print("Number you Enter is a bit too high than the number you Entered")
@@ -41,15 +42,12 @@ try:
                                 except ValueError:
                                     print("Enter Valid Input")           
                                 
-
                             else :
                                 print("Only Enter (y/n)")
                                 Continue = input("Want to continue trying (y/n) : ").lower()
 
                         except ValueError:
                             print("Only Enter (y/n)")
-
-
 
                     else :
                         print("Number you Enter is a bit too low  than the number you Entered")
@@ -75,21 +73,16 @@ try:
                                 except ValueError:
                                     print("Enter Valid Input")
                                 
-
                             else :
                                 print("Only Enter (y/n)")
                                 Continue = input("Want to continue trying (y/n) : ").lower()
 
                         except ValueError:
                             print("Only Enter = (y/n)")
-
-                        
-
                 else:
                     print("pls Enter between 1 to 100")
                     guess = int(input("Guess a number : ")) 
-                    
-
+            
         elif Consent == 'n':
             print("Thanks for Visiting")
             break
